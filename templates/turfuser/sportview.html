@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>view sports</title>
+    </head>
+    <body>
+        <center>
+          <h1>VIEW SPORTS</h1>
+        <table border="2">
+
+          <tr>
+            <td>NAME</td>
+         </tr>
+
+        {% for j in data %}
+
+        <tr>
+            <td>{{j.name}}</td>
+        </tr>
+
+        {% endfor %}
+
+        </table>
+    </center>
+    </body>
+</html>

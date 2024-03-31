@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>view sports</title>
+    </head>
+    <body>
+        <center>
+          <h1>VIEW SLOT</h1>
+        <table border="2">
+
+          <tr>
+            <td>TURF</td>
+            <td>OPENTIME</td>
+            <td>CLOSETIME</td>
+         </tr>
+
+        {% for j in data %}
+
+        <tr>
+            <td>{{j.turf}}</td>
+            <td>{{j.opentime}}</td>
+            <td>{{j.closetime}}</td>
+        </tr>
+
+        {% endfor %}
+
+        </table>
+    </center>
+    </body>
+</html>

@@ -1,0 +1,92 @@
+{% load static %}
+<html>
+  <head>
+<title>booking</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.booking-form {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.submit-button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-button:hover {
+  background-color: #2980b9;
+}
+.form-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.form-table, th, td {
+  border: 1px solid #ddd;
+}
+.main-heading {
+  color: #3498db; /* Customize the color as needed */
+  text-align: center; /* Align the text in the center */
+  margin-bottom: 20px; /* Add spacing below the heading */
+}
+
+</style>
+  </head>
+  <body>
+    <br>
+    <center>
+      <h1 class="main-heading">BOOK NOW</h1>
+    </center>
+    <br><br>
+
+    {% block content %}
+      <form method="post" class="booking-form">
+        {% csrf_token %}
+        <table>
+        {{ form.as_p }}
+      </table>
+        <input type="submit" value="Submit" class="submit-button">
+      </form>
+    {% endblock %}
+    </body>
+    </html>
+
+
+  

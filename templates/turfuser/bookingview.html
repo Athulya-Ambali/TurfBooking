@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+        .main-heading {
+  color: #3498db; /* Customize the color as needed */
+  text-align: center; /* Align the text in the center */
+  margin-bottom: 20px; /* Add spacing below the heading */
+}
+    </style>
+</head>
+<body>
+    <h1 class="main-heading">BOOKING STATUS</h1>
+  <table border="2">
+    <tr>
+      <td>TURF</td>
+            <td>NAME</td>
+            <td>EMAIL</td>
+            <td>CONTACT</td>
+            <td>SPORT</td>
+            <td>SLOT</td>
+            <td>HOUR</td>
+            <td>PLAYERS</td>
+            <td>BOOK_DATE</td>
+            <td>Status</td>
+      </tr>
+    </tr>
+        {% for j in data %}
+        <tr>
+          <td>{{j.turf}}</td>
+          <td>{{j.name}}</td>
+          <td>{{j.email}}</td>
+          <td>{{j.contact}}</td>
+          <td>{{j.sport}}</td>
+          <td>{{j.slot}}</td>
+          <td>{{j.hour}}</td>
+          <td>{{j.players}}</td>
+          <td>{{j.book_date}}</td>
+          <td>{{j.status}}</td>
+          
+      
+        </tr>
+        {% endfor %}
+        
+      </table>
+    </center>
+    </body>
+    </html>
+    
+
+</body>
+</html>
